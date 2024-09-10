@@ -1,3 +1,5 @@
 // Reexport your entry components here
-export { LDContent } from './components/LDContent.svelte'
-export { Markdown } from './components/Markdown.svelte'
+import LDContent from './components/LDContent.svelte'
+import Markdown from './components/Markdown.svelte'
+
+export {LDContent, Markdown}
