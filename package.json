@@ -67,6 +67,7 @@
   "type": "module",
   "dependencies": {
     "dompurify": "^3.1.6",
-    "marked": "^14.1.2"
+    "marked": "^14.1.2",
+    "ramda": "^0.30.1"
   }
 }
