@@ -14,15 +14,17 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const EmptyPublicTypeIndex = {
   args: {
-    jsonld: [{
-      "@id": "http://localhost:3000/pod1/settings/publicTypeIndex.ttl",
+    jsonld: [
+      {
+        '@id': 'http://localhost:3000/pod1/settings/publicTypeIndex.ttl',
 
-      "@type": [
-        "http://www.w3.org/ns/solid/terms#TypeIndex",
-        "http://www.w3.org/ns/solid/terms#ListedDocument"
-      ]
-    }],
-    currentUrl: "http://localhost:3000/pod1/settings/publicTypeIndex.ttl",
+        '@type': [
+          'http://www.w3.org/ns/solid/terms#TypeIndex',
+          'http://www.w3.org/ns/solid/terms#ListedDocument',
+        ],
+      },
+    ],
+    currentUrl: 'http://localhost:3000/pod1/settings/publicTypeIndex.ttl',
     select: () => {},
     iri: '',
   },
@@ -83,8 +85,51 @@ export const EmptyPrivateTypeIndex = {
         ],
       },
     ],
-    currentUrl: "http://localhost:3000/pod1/settings/privateTypeIndex.ttl",
+    currentUrl: 'http://localhost:3000/pod1/settings/privateTypeIndex.ttl',
     select: () => {},
     iri: '',
+  },
+}
+
+export const ExamplePublicTypeIndex = {
+  args: {
+    jsonld: [
+      {
+        '@id': 'https://webid.fet.li/todo/settings/publicTypeIndex.ttl',
+        '@type': [
+          'http://www.w3.org/ns/solid/terms#TypeIndex',
+          'http://www.w3.org/ns/solid/terms#ListedDocument',
+        ],
+      },
+      {
+        '@id': 'https://webid.fet.li/todo/publicTypeIndex.ttl#thisisatest',
+        '@type': ['http://www.w3.org/ns/solid/terms#TypeRegistration'],
+        'http://www.w3.org/ns/solid/terms#forClass': [
+          {
+            '@id': 'https://www.w3.org/2002/12/cal/ical#Vtodo',
+          },
+        ],
+        'http://www.w3.org/ns/solid/terms#instance': [
+          {
+            '@id': 'https://webid.fet.li/todo/public/films',
+          },
+        ],
+      },
+      {
+        '@id': 'https://webid.fet.li/todo/publicTypeIndex.ttl#thisisanothertest',
+        '@type': ['http://www.w3.org/ns/solid/terms#TypeRegistration'],
+        'http://www.w3.org/ns/solid/terms#forClass': [
+          {
+            '@id': 'https://www.w3.org/2002/12/cal/ical#Vtodo',
+          },
+        ],
+        'http://www.w3.org/ns/solid/terms#instance': [
+          {
+            '@id': 'https://webid.fet.li/todo/public/hack-the-promise',
+          },
+        ],
+      },
+    ],
+    currentUrl: 'https://webid.fet.li/todo/settings/publicTypeIndex.ttl',
   },
 }
