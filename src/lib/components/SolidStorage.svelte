@@ -1,5 +1,5 @@
 <script>
-  import { container } from '../solid/storage'
+  import { container } from '../solid/ldp-storage.js'
 
   let { /** @type {string} */ webId, /** @type {function} */ storageIs } = $props()
 
