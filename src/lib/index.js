@@ -2,4 +2,4 @@
 import LDContent from './components/LDContent.svelte'
 import Markdown from './components/Markdown.svelte'
 
-export {LDContent, Markdown}
+export { LDContent, Markdown }
