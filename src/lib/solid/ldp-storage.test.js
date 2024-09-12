@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { fetchLinkHeaders, getParentContainer, hasSpaceStorageType } from './storage.js'
+import { fetchLinkHeaders, getParentContainer, hasSpaceStorageType } from './ldp-storage.js'
 import { none } from 'fp-ts/Option'
 
 global.fetch = vi.fn()
