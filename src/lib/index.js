@@ -4,6 +4,15 @@ import Markdown from './components/Markdown.svelte'
 import Redirect from './components/Redirect.svelte'
 import SolidLogin from './components/SolidLogin.svelte'
 import SolidStorage from './components/SolidStorage.svelte'
-import { fetchLinkHeaders, container } from './solid/ldp-storage.js'
+import { fetchLinkHeaders, container, getParentContainer } from './solid/ldp-storage.js'
 
-export { LDContent, Markdown, Redirect, SolidLogin, SolidStorage, fetchLinkHeaders, container }
+export {
+  LDContent,
+  Markdown,
+  Redirect,
+  SolidLogin,
+  SolidStorage,
+  fetchLinkHeaders,
+  container,
+  getParentContainer,
+}
