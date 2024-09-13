@@ -31,6 +31,12 @@
   })
 </script>
 
+{#snippet resetButton()}
+  {#if reset && typeof handleReset === 'function'}
+    <button onclick={handleReset}>{reset}</button>
+  {/if}
+{/snippet}
+
 {#if isEmpty($session?.session)}
   {#if !loginEndpoint}
     <WebIDCheck validOIDCEndpoint={setUrl} />
@@ -38,13 +44,12 @@
     <button onclick={() => startLogin($session, loginEndpoint, redirect)}
       >Login to {loginEndpoint}</button
     >
+    {@render resetButton()}
   {/if}
 {:else if $session}
   {#if success && typeof success === 'function'}
     {@render success(info)}
   {/if}
   <button onclick={() => startLogout($session)}>Log out</button>
-  {#if reset && typeof handleReset === 'function'}
-    <button onclick={handleReset}>{reset}</button>
-  {/if}
+  {@render resetButton()}
 {/if}
