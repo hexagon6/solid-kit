@@ -1,0 +1,6 @@
+{
+  "port": 3000,
+  "loggingLevel": "error",
+  "baseUrl": "http://localhost:3000",
+  "seedConfig": "solid/seed.json"
+}
