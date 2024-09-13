@@ -6,6 +6,7 @@ import SolidLogin from './components/SolidLogin.svelte'
 import SolidStorage from './components/SolidStorage.svelte'
 import { fetchLinkHeaders, container, getParentContainer } from './solid/ldp-storage.js'
 import { createSession } from './solid/session.svelte.js'
+import { oidcIssuer } from './solid/localstorage.js'
 
 export {
   LDContent,
@@ -17,4 +18,5 @@ export {
   fetchLinkHeaders,
   container,
   getParentContainer,
+  oidcIssuer,
 }

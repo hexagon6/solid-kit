@@ -5,13 +5,21 @@
   import { startLogin, startLogout } from '$lib/solid/auth.svelte.js'
   import { isEmpty } from 'ramda'
 
-  let loginEndpoint = $state('')
+  let { oidcIssuer = '', success, reset = false, handleReset, handleSet } = $props()
+
+  let loginEndpoint = $state(oidcIssuer)
 
   let session = getContext('session')
 
   let info = $derived($session.session.info)
 
-  const setUrl = ({ oidcEndpoint }) => (loginEndpoint = oidcEndpoint)
+  const setUrl = ({ oidcEndpoint }) => {
+    if (handleSet) {
+      handleSet(oidcEndpoint)
+    } else {
+      loginEndpoint = oidcEndpoint
+    }
+  }
 
   /**
    * @type {string}
@@ -23,7 +31,7 @@
   })
 </script>
 
-{#if isEmpty($session.session)}
+{#if isEmpty($session?.session)}
   {#if !loginEndpoint}
     <WebIDCheck validOIDCEndpoint={setUrl} />
   {:else}
@@ -31,8 +39,12 @@
       >Login to {loginEndpoint}</button
     >
   {/if}
-{:else}
-  <p>Your webid is {info?.webId}</p>
+{:else if $session}
+  {#if success && typeof success === 'function'}
+    {@render success(info)}
+  {/if}
   <button onclick={() => startLogout($session)}>Log out</button>
-  <!-- <pre>{JSON.stringify($session, null, 2)}</pre> -->
+  {#if reset && typeof handleReset === 'function'}
+    <button onclick={handleReset}>{reset}</button>
+  {/if}
 {/if}
