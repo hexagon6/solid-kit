@@ -5,7 +5,7 @@
   import { startLogin, startLogout } from '$lib/solid/auth.svelte.js'
   import { isEmpty } from 'ramda'
 
-  let { oidcIssuer = '', success, reset = false, handleReset, handleSet } = $props()
+  let { oidcIssuer = '', success, reset, handleReset, handleSet } = $props()
 
   let loginEndpoint = $state(oidcIssuer)
 
@@ -14,11 +14,17 @@
   let info = $derived($session.session.info)
 
   const setUrl = ({ oidcEndpoint }) => {
-    if (handleSet) {
+    if (typeof handleSet === 'function') {
       handleSet(oidcEndpoint)
-    } else {
-      loginEndpoint = oidcEndpoint
     }
+    loginEndpoint = oidcEndpoint
+  }
+
+  const resetUrl = () => {
+    if (typeof handleReset === 'function') {
+      handleReset()
+    }
+    loginEndpoint = undefined
   }
 
   /**
@@ -32,8 +38,8 @@
 </script>
 
 {#snippet resetButton()}
-  {#if reset && typeof handleReset === 'function'}
-    <button onclick={handleReset}>{reset}</button>
+  {#if reset}
+    <button onclick={resetUrl}>{reset}</button>
   {/if}
 {/snippet}
 

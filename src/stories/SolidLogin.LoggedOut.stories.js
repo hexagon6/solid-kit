@@ -23,3 +23,10 @@ export const LoggedOutWithOIDC = {
     oidcIssuer: 'http://localhost:3000',
   },
 }
+
+export const LoggedOutReset = {
+  args: {
+    oidcIssuer: 'http://localhost:3000',
+    reset: 'reset',
+  },
+}
