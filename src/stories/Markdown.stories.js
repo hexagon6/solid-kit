@@ -5,6 +5,7 @@ import Markdown from '../lib/components/Markdown.svelte'
 export default {
   title: 'Markdown',
   component: Markdown,
+  tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',

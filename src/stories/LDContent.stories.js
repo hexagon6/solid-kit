@@ -5,6 +5,7 @@ import LDContent from '$lib/components/LDContent.svelte'
 export default {
   title: 'Solid/LDContent',
   component: LDContent,
+  tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',

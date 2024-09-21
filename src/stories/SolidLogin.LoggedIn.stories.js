@@ -14,6 +14,7 @@ const loginSuccess = createRawSnippet((name) => ({
 export default {
   title: 'Solid/Login/LoggedIn',
   component: SolidLogin,
+  tags: ['autodocs'],
   decorators: [() => SessionContextLoggedIn],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout

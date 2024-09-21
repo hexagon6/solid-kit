@@ -6,6 +6,7 @@ import SessionContextLoggedOut from './MockSessionContextLoggedOut.svelte'
 export default {
   title: 'Solid/Login/LoggedOut',
   component: SolidLogin,
+  tags: ['autodocs'],
   decorators: [() => SessionContextLoggedOut],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
