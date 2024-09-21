@@ -1,3 +1,4 @@
+import { fn } from '@storybook/test'
 import Header from './Header.svelte'
 
 export default {
@@ -13,10 +14,19 @@ export default {
 
 export const LoggedIn = {
   args: {
+    login: fn(),
+    logout: fn(),
+    createAccount: fn(),
     user: {
       name: 'Jane Doe',
     },
   },
 }
 
-export const LoggedOut = {}
+export const LoggedOut = {
+  args: {
+    login: fn(),
+    logout: fn(),
+    createAccount: fn(),
+  },
+}

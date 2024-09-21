@@ -1,22 +1,10 @@
+<svelte:options runes />
+
 <script>
   import './header.css'
   import Button from './Button.svelte'
 
-  import { createEventDispatcher } from 'svelte'
-
-  export let user = null
-
-  const dispatch = createEventDispatcher()
-
-  function onLogin(event) {
-    dispatch('login', event)
-  }
-  function onLogout(event) {
-    dispatch('logout', event)
-  }
-  function onCreateAccount(event) {
-    dispatch('createAccount', event)
-  }
+  let { login, logout, createAccount, user } = $props()
 </script>
 
 <header>
@@ -42,10 +30,10 @@
         <span class="welcome">
           Welcome, <b>{user.name}</b>!
         </span>
-        <Button size="small" on:click={onLogout} label="Log out" />
+        <Button size="small" onclick={logout} label="Log out" />
       {:else}
-        <Button size="small" on:click={onLogin} label="Log in" />
-        <Button primary size="small" on:click={onCreateAccount} label="Sign up" />
+        <Button size="small" onclick={login} label="Log in" />
+        <Button primary size="small" onclick={createAccount} label="Sign up" />
       {/if}
     </div>
   </div>
