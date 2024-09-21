@@ -30,7 +30,7 @@ export const fetchLinkHeaders = async (/** @type {string} */ url) => {
   if (typeof url !== 'string') {
     return none
   }
-  const res = fetchHead(url).catch((e) => none)
+  const res = fetchHead(url).catch(() => none)
   if (typeof res.then !== 'function') {
     return none
   }
