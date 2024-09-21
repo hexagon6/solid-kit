@@ -1,16 +1,18 @@
+<svelte:options runes />
+
 <script>
   import './page.css'
   import Header from './Header.svelte'
 
-  let user = null
+  let user = $state(null)
 </script>
 
 <article>
   <Header
     {user}
-    on:login={() => (user = { name: 'Jane Doe' })}
-    on:logout={() => (user = null)}
-    on:createAccount={() => (user = { name: 'Jane Doe' })}
+    login={() => (user = { name: 'Jane Doe' })}
+    logout={() => (user = null)}
+    createAccount={() => (user = { name: 'Jane Doe' })}
   />
 
   <section class="storybook-page">
