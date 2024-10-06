@@ -15,8 +15,8 @@ test('login authorize logout works', async ({ page }) => {
   // click on login page link
   await page.getByRole('link', { name: 'Login Page' }).click()
   // Enter webid oidcIssuer URL
-  await page.getByLabel('Choose your webid').fill(cssConfig.baseUrl)
-  await page.getByLabel('Choose your webid').press('Enter')
+  await page.getByLabel('Enter your webid').fill(cssConfig.baseUrl)
+  await page.getByLabel('Enter your webid').press('Enter')
   // confirm webid selection
   await page.getByRole('button', { name: '✅ set' }).click()
   // Log in to oidcIssuer

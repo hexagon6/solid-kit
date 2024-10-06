@@ -43,9 +43,16 @@
   {/if}
 {/snippet}
 
+{#snippet label()}
+  Enter your webid
+{/snippet}
+
 {#if isEmpty($session?.session)}
   {#if !loginEndpoint}
-    <WebIDCheck validOIDCEndpoint={setUrl} />
+    <WebIDCheck {label} placeholder="your WebID url" validOIDCEndpoint={setUrl} />
+    <a href="https://solidproject.org/users/get-a-pod#next-steps" target="_blank"
+      >I don't have a Solid WebID Profile</a
+    >
   {:else}
     <button onclick={() => startLogin($session, loginEndpoint, redirect)}
       >Login to {loginEndpoint}</button
@@ -58,4 +65,6 @@
   {/if}
   <button onclick={() => startLogout($session)}>Log out</button>
   {@render resetButton()}
+{:else}
+  no session available, use setContext('session')
 {/if}
