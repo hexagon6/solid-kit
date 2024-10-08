@@ -5,11 +5,11 @@
   import { startLogin, startLogout } from '$lib/solid/auth.svelte.js'
   import { isEmpty } from 'ramda'
 
-  let { oidcIssuer = '', success, reset, handleReset, handleSet } = $props()
+  let { context = 'session', oidcIssuer = '', success, reset, handleReset, handleSet } = $props()
 
   let loginEndpoint = $state(oidcIssuer)
 
-  let session = getContext('session')
+  let session = getContext(context)
 
   let info = $derived($session.session.info)
 
