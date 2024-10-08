@@ -2,9 +2,8 @@ import { fn } from '@storybook/test'
 import Header from './Header.svelte'
 
 export default {
-  title: 'Example/Header',
+  title: 'Solid/SolidHeader',
   component: Header,
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   args: {
     login: fn(),
@@ -12,17 +11,38 @@ export default {
     createAccount: fn(),
   },
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
 }
 
+export const NoSessionAvailable = {}
+
 export const LoggedIn = {
   args: {
-    user: {
-      name: 'Jane Doe',
-    },
+    session: { session: { info: { isLoggedIn: true, webId: 'http://example.com/test' } } },
+    oidcIssuer: 'http://example.com',
   },
 }
 
-export const LoggedOut = {}
+export const LoggedInReset = {
+  args: {
+    session: { session: { info: { isLoggedIn: true, webId: 'http://example.com/test' } } },
+    oidcIssuer: 'http://example.com',
+    reset: 'reset',
+  },
+}
+
+export const LoggedOut = {
+  args: {
+    session: { session: {} },
+    oidcIssuer: 'http://example.com',
+  },
+}
+
+export const LoggedOutReset = {
+  args: {
+    session: { session: {} },
+    oidcIssuer: 'http://example.com',
+    reset: 'reset',
+  },
+}
