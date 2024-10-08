@@ -13,21 +13,34 @@
 {/snippet}
 
 {#snippet logo()}
-  <h1>🌐🪪 Solid WebID</h1>
+  <h1>🌐🪪 <span class="logo-text">Solid WebID</span></h1>
 {/snippet}
 
 <header>
   <div class="solid-header">
-    <div>
+    <div class="logo-box">
       {@render logo()}
     </div>
-    <div class="flex-row">
+    <div class="flex-row login-box">
       <SolidLogin {context} {oidcIssuer} {reset} success={successSnippet || success} />
     </div>
   </div>
 </header>
 
 <style>
+  header {
+    container-type: inline-size;
+  }
+
+  @container (width < 400px) {
+    .logo-text {
+      display: none;
+    }
+    .login-box {
+      background-color: rgba(20, 20, 255, 0.2);
+    }
+  }
+
   .flex-row {
     display: flex;
     flex-direction: row;
