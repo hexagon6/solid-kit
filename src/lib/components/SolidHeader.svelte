@@ -7,12 +7,13 @@
     context = 'session',
     oidcIssuer,
     reset,
-    success: successSnippet,
+    successInfo: successSnippet,
+    disableInfo = false,
     logoText = 'Solid WebID',
   } = $props()
 </script>
 
-{#snippet success(info)}
+{#snippet successInfo(info)}
   <div class="info">
     logged in with {info.webId}
   </div>
@@ -28,7 +29,12 @@
       {@render logo()}
     </div>
     <div class="flex-row login-box">
-      <SolidLogin {context} {oidcIssuer} {reset} success={successSnippet || success} />
+      <SolidLogin
+        {context}
+        {oidcIssuer}
+        {reset}
+        success={disableInfo ? undefined : successSnippet || successInfo}
+      />
     </div>
   </div>
 </header>

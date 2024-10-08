@@ -19,6 +19,15 @@ export const NoSessionAvailable = {}
 
 export const LoggedIn = {
   args: {
+    disableInfo: false,
+    session: { session: { info: { isLoggedIn: true, webId: 'http://example.com/test' } } },
+    oidcIssuer: 'http://example.com',
+  },
+}
+
+export const LoggedInDisableInfo = {
+  args: {
+    disableInfo: true,
     session: { session: { info: { isLoggedIn: true, webId: 'http://example.com/test' } } },
     oidcIssuer: 'http://example.com',
   },
