@@ -15,7 +15,7 @@
 
 {#snippet successInfo(info)}
   <div class="info">
-    logged in with {info.webId}
+    logged in <span class="info-webid">with {info.webId}</span>
   </div>
 {/snippet}
 
@@ -45,17 +45,18 @@
   }
 
   @container (width < 400px) {
-    .logo-text {
-      display: none;
-    }
     .login-box {
       background-color: rgba(20, 20, 255, 0.2);
+    }
+    .info-webid {
+      display: none;
     }
   }
 
   .flex-row {
     display: flex;
     flex-direction: row;
+    gap: 1em;
   }
 
   .solid-header {
@@ -65,6 +66,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.5em;
   }
 
   .solid-header :global(h1) {
