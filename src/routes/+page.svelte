@@ -18,6 +18,7 @@
 <h1>Welcome to solid-kit</h1>
 <nav>
   <a href="/login?redirect_url=/">Login Page</a>
+  <a href="/app?redirect_url=/app">Example Solid App Page</a>
 </nav>
 <main>
   {#if loggedIn}

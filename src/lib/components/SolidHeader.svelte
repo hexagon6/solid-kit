@@ -5,6 +5,7 @@
 
   let {
     context = 'session',
+    handleSet,
     oidcIssuer,
     reset,
     successInfo: successSnippet,
@@ -33,6 +34,7 @@
         {context}
         {oidcIssuer}
         {reset}
+        {handleSet}
         success={disableInfo ? undefined : successSnippet || successInfo}
       />
     </div>

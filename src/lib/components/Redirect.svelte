@@ -8,7 +8,6 @@
   const { from, redirect = '/' } = $props()
   // @ts-ignore
   const redirectUrl = redirect.replace(from, '')
-  $inspect(redirect)
   const target = new URL(
     redirectUrl !== '/' ? `/${redirectUrl}` : '/',
     window?.location?.href,
