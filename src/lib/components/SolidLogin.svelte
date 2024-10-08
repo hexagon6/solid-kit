@@ -55,7 +55,7 @@
     >
   {:else}
     <button onclick={() => startLogin($session, loginEndpoint, redirect)}
-      >Login to {loginEndpoint}</button
+      >Login with {loginEndpoint}</button
     >
     {@render resetButton()}
   {/if}

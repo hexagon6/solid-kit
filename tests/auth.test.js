@@ -20,7 +20,7 @@ test('login authorize logout works', async ({ page }) => {
   // confirm webid selection
   await page.getByRole('button', { name: '✅ set' }).click()
   // Log in to oidcIssuer
-  await page.getByRole('button', { name: 'Login to http://localhost:' }).click()
+  await page.getByRole('button', { name: 'Login with http://localhost:' }).click()
   // navigates to oidcIssuer service, Log in with credentials
   await page.getByLabel('Email').fill(seed.email)
   await page.getByLabel('Email').press('Tab')
