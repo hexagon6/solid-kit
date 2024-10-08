@@ -47,42 +47,65 @@
   Enter your webid
 {/snippet}
 
-{#if isEmpty($session?.session)}
-  {#if !loginEndpoint}
-    <WebIDCheck {label} placeholder="your WebID url" validOIDCEndpoint={setUrl} />
-    <a href="https://solidproject.org/users/get-a-pod#next-steps" target="_blank"
-      >I don't have a Solid WebID Profile</a
-    >
-  {:else}
-    <button onclick={() => startLogin($session, loginEndpoint, redirect)}
-      >Login with {loginEndpoint}</button
-    >
-    {@render resetButton()}
-  {/if}
-{:else if $session}
-  {#if success && typeof success === 'function'}
-    <div class="info">
-      {@render success(info)}
-    </div>
-  {/if}
-  <button onclick={() => startLogout($session)}>Log out</button>
-  {@render resetButton()}
-{:else}
-  <div class="error">
-    Setup Error:
+<div class="login-container">
+  {#if isEmpty($session?.session)}
+    {#if !loginEndpoint}
+      <WebIDCheck {label} placeholder="your WebID url" validOIDCEndpoint={setUrl} />
+      <a href="https://solidproject.org/users/get-a-pod#next-steps" target="_blank" class="hint"
+        >I don't have a Solid WebID Profile</a
+      >
+    {:else}
+      <button onclick={() => startLogin($session, loginEndpoint, redirect)}
+        >Login with {loginEndpoint}</button
+      >
+      {@render resetButton()}
+    {/if}
+  {:else if $session}
+    {#if success && typeof success === 'function'}
+      <div class="info">
+        {@render success(info)}
+      </div>
+    {/if}
     <div>
-      no session available (your users should not see this!)
+      <button onclick={() => startLogout($session)}>Log out</button>
+      {@render resetButton()}
+    </div>
+  {:else}
+    <div class="error">
+      Setup Error:
       <div>
-        use
-        <code>setContext('session', writable(&lbrace;session&rbrace;)</code> in your app or use the
-        <code>session</code>
-        prop)
+        no session available (your users should not see this!)
+        <div>
+          use
+          <code>setContext('session', writable(&lbrace;session&rbrace;)</code> in your app or use
+          the
+          <code>session</code>
+          prop)
+        </div>
       </div>
     </div>
-  </div>
-{/if}
+  {/if}
+</div>
 
 <style>
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 0.4em;
+  }
+
+  @container (width > 400px) {
+    .login-container {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .login-container a {
+    font-size: 0.8em;
+  }
+
   .error {
     background: red;
     color: white;
@@ -92,5 +115,9 @@
 
   .info {
     padding: 0 0.4em;
+  }
+
+  :global(button) {
+    width: fit-content;
   }
 </style>

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@hexagon6/svelte-solid-webid-check':
-        specifier: 1.0.0-next.0
-        version: 1.0.0-next.0(svelte@5.0.0-next.246)
+        specifier: 1.0.0-next.1
+        version: 1.0.0-next.1(svelte@5.0.0-next.246)
       '@inrupt/solid-client-authn-browser':
         specifier: ^2.2.6
         version: 2.2.6
@@ -518,8 +518,8 @@ packages:
     resolution: {integrity: sha512-autAXT203ixhqei9xt+qkYOvY8l6LAFIdT2UXc/RPNeUVfqRF1BV94GTJyVPFKT8nFM6MyVJhjLj9E8JWvf5zQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@hexagon6/svelte-solid-webid-check@1.0.0-next.0':
-    resolution: {integrity: sha512-5bTp3bZshpSAG8FfIjgjah8Rfo/riJcEcbm6HTPEvqwXwueUh/JOK/EUig9eC0lc12awcC0ileCZEdUXPreTsw==}
+  '@hexagon6/svelte-solid-webid-check@1.0.0-next.1':
+    resolution: {integrity: sha512-kEf+g1w1tT/C2g0Y6n+u63cNx5IO9OyZuB2OpUrYCXOi3uma4YqYY1DP/Y7TpHjgSBY1Bnvnbh93liJZabBvhw==}
     peerDependencies:
       svelte: ^5.0.0-next.235
 
@@ -3111,7 +3111,7 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@hexagon6/svelte-solid-webid-check@1.0.0-next.0(svelte@5.0.0-next.246)':
+  '@hexagon6/svelte-solid-webid-check@1.0.0-next.1(svelte@5.0.0-next.246)':
     dependencies:
       svelte: 5.0.0-next.246
 
