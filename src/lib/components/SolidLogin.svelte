@@ -66,5 +66,25 @@
   <button onclick={() => startLogout($session)}>Log out</button>
   {@render resetButton()}
 {:else}
-  no session available, use setContext('session')
+  <div class="error">
+    Setup Error:
+    <div>
+      no session available (your users should not see this!)
+      <div>
+        use
+        <code>setContext('session', writable(&lbrace;session&rbrace;)</code> in your app or use the
+        <code>session</code>
+        prop)
+      </div>
+    </div>
+  </div>
 {/if}
+
+<style>
+  .error {
+    background: red;
+    color: white;
+    padding: 0.4em;
+    border-radius: 0.3em;
+  }
+</style>
