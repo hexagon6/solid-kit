@@ -3,7 +3,13 @@
 <script>
   import SolidLogin from '$lib/components/SolidLogin.svelte'
 
-  let { context = 'session', oidcIssuer, reset, success: successSnippet } = $props()
+  let {
+    context = 'session',
+    oidcIssuer,
+    reset,
+    success: successSnippet,
+    logoText = 'Solid WebID',
+  } = $props()
 </script>
 
 {#snippet success(info)}
@@ -13,7 +19,7 @@
 {/snippet}
 
 {#snippet logo()}
-  <h1>🌐🪪 <span class="logo-text">Solid WebID</span></h1>
+  <h1>🌐🪪 <span class="logo-text">{logoText}</span></h1>
 {/snippet}
 
 <header>
