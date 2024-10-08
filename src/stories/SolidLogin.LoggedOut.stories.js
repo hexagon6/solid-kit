@@ -4,7 +4,7 @@ import SolidLogin from '$lib/components/SolidLogin.svelte'
 import SessionContextLoggedOut from './MockSessionContextLoggedOut.svelte'
 
 export default {
-  title: 'Solid/Login/LoggedOut',
+  title: 'Solid/SolidLogin/LoggedOut',
   component: SolidLogin,
   tags: ['autodocs'],
   decorators: [() => SessionContextLoggedOut],

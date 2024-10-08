@@ -12,7 +12,7 @@ const loginSuccess = createRawSnippet((name) => ({
 }))
 
 export default {
-  title: 'Solid/Login/LoggedIn',
+  title: 'Solid/SolidLogin/LoggedIn',
   component: SolidLogin,
   tags: ['autodocs'],
   decorators: [() => SessionContextLoggedIn],
