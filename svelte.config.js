@@ -12,7 +12,7 @@ const config = {
       handleHttpError: ({ message }) => {
         throw new Error(message)
       },
-      entries: ['/', '/redirect', '/redirect/'],
+      entries: ['/', '/redirect', '/redirect/', '/app', '/redirect/app', '/login'],
     },
   },
 
