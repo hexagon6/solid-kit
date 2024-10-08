@@ -61,7 +61,9 @@
   {/if}
 {:else if $session}
   {#if success && typeof success === 'function'}
-    {@render success(info)}
+    <div class="info">
+      {@render success(info)}
+    </div>
   {/if}
   <button onclick={() => startLogout($session)}>Log out</button>
   {@render resetButton()}
@@ -86,5 +88,9 @@
     color: white;
     padding: 0.4em;
     border-radius: 0.3em;
+  }
+
+  .info {
+    padding: 0 0.4em;
   }
 </style>
