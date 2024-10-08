@@ -3,7 +3,7 @@
 <script>
   import SolidLogin from '$lib/components/SolidLogin.svelte'
 
-  let { context = 'session', oidcIssuer, reset } = $props()
+  let { context = 'session', oidcIssuer, reset, success: successSnippet } = $props()
 </script>
 
 {#snippet success(info)}
@@ -22,7 +22,7 @@
       {@render logo()}
     </div>
     <div class="flex-row">
-      <SolidLogin {context} {oidcIssuer} {reset} {success} />
+      <SolidLogin {context} {oidcIssuer} {reset} success={successSnippet || success} />
     </div>
   </div>
 </header>

@@ -2,18 +2,25 @@
 
 <script>
   import './page.css'
-  import Header from './Header.svelte'
+  import Header from '$lib/components/SolidHeader.svelte'
+  import { setContext } from 'svelte'
+  import { writable } from 'svelte/store'
+
+  let { session, oidcIssuer, reset } = $props()
+  let store = writable({ session })
+  setContext('session', store)
 
   let user = $state(null)
 </script>
 
+{#snippet success(info)}
+  <div class="info">
+    logged in as {info.webId}
+  </div>
+{/snippet}
+
 <article>
-  <Header
-    {user}
-    login={() => (user = { name: 'Jane Doe' })}
-    logout={() => (user = null)}
-    createAccount={() => (user = { name: 'Jane Doe' })}
-  />
+  <Header {user} {oidcIssuer} {success} {reset} />
 
   <section class="storybook-page">
     <h2>Pages in Storybook</h2>
@@ -70,3 +77,11 @@
     </div>
   </section>
 </article>
+
+<style>
+  .info {
+    font-size: 0.7rem;
+    margin: 1em;
+    color: rgba(22, 62, 75, 0.472);
+  }
+</style>
