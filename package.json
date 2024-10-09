@@ -6,6 +6,7 @@
     "url": "git+https://github.com/hexagon6/solid-kit.git"
   },
   "scripts": {
+    "ci": "npm run solid & npm run test:integration; npm run solid:stop",
     "dev": "vite dev",
     "build": "vite build && npm run package",
     "preview": "vite preview",
@@ -14,6 +15,7 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
     "solid": "npx @solid/community-server",
+    "solid:stop": "lsof -i :3000 -t | xargs kill",
     "test": "npm run test:integration && npm run test:unit",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
