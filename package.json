@@ -1,10 +1,13 @@
 {
   "name": "@hexagon6/solid-kit",
   "version": "0.0.13",
-  "repository": {
+  "repository": [{
     "type": "git",
     "url": "git+https://github.com/hexagon6/solid-kit.git"
-  },
+  },{
+    "type": "git",
+    "url": "git+https://gitlab.fet.li/solid/kit.git"
+  }],
   "scripts": {
     "ci": "npm run solid & npm run test:integration; npm run solid:stop",
     "dev": "vite dev",
