@@ -71,7 +71,7 @@ Some Svelte components can be used for interacting with a Solid OIDC server, whi
 
 ### Integration Testing
 
-Run `pnpm run solid & pnpm run test` to check if the full stack is still working after changes.
+Run `pnpm run ci` to check if the full stack is still working after changes.
 
 ### Storybook
 
