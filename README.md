@@ -73,6 +73,12 @@ Some Svelte components can be used for interacting with a Solid OIDC server, whi
 
 Run `pnpm run ci` to check if the full stack is still working after changes.
 
+### Base Path
+
+If you want to deploy your Single Page Application on a different path than `/` you can set the environment variable BASEPATH when building, e.g.:
+
+`BASEPATH=/alternative pnpm run build` if you will deploy your application in a `/alternative` subfolder on your webserver.
+
 ### Storybook
 
 > Status: Implemented, but not yet published

@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths'
   import SolidLogin from '$lib/components/SolidLogin.svelte'
 </script>
 
@@ -7,4 +8,4 @@
     history.back()
   }}>go back</button
 >
-<SolidLogin />
+<SolidLogin {base} />

@@ -1,6 +1,6 @@
 import { login, getDefaultSession } from '@inrupt/solid-client-authn-browser'
 
-export async function startLogin(session, loginEndpoint, redirect) {
+export async function startLogin(session, loginEndpoint, redirect, base = '') {
   if (!getDefaultSession().info.isLoggedIn) {
     if (!redirect) {
       alert('redirect is falsy')
@@ -9,7 +9,7 @@ export async function startLogin(session, loginEndpoint, redirect) {
     }
     await login({
       oidcIssuer: loginEndpoint,
-      redirectUrl: new URL('/redirect' + redirect, window.location.href).toString(),
+      redirectUrl: new URL(`${base}/redirect${redirect}`, window.location.href).toString(),
       clientName: 'Solid testing',
     })
   } else {

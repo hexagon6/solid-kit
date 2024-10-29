@@ -5,7 +5,15 @@
   import { startLogin, startLogout } from '$lib/solid/auth.svelte.js'
   import { isEmpty } from 'ramda'
 
-  let { context = 'session', oidcIssuer = '', success, reset, handleReset, handleSet } = $props()
+  let {
+    base = '',
+    context = 'session',
+    oidcIssuer = '',
+    success,
+    reset,
+    handleReset,
+    handleSet,
+  } = $props()
 
   let loginEndpoint = $state(oidcIssuer)
 
@@ -55,7 +63,7 @@
         >I don't have a Solid WebID Profile</a
       >
     {:else}
-      <button onclick={() => startLogin($session, loginEndpoint, redirect)}
+      <button onclick={() => startLogin($session, loginEndpoint, redirect, base)}
         >Login with {loginEndpoint}</button
       >
       {@render resetButton()}

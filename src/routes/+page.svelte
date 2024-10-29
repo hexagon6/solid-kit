@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths'
   import { getContext } from 'svelte'
   import SolidStorage from '$lib/components/SolidStorage.svelte'
 
@@ -17,8 +18,8 @@
 
 <h1>Welcome to solid-kit</h1>
 <nav>
-  <a href="/login?redirect_url=/">Login Page</a>
-  <a href="/app?redirect_url=/app">Example Solid App Page</a>
+  <a href="{base}/login?redirect_url={base}/">Login Page</a>
+  <a href="{base}/app?redirect_url={base}/app">Example Solid App Page</a>
 </nav>
 <main>
   {#if loggedIn}

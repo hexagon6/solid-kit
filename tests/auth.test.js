@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test'
 import cssConfig from '../.community-solid-server.config.json' with { type: 'json' }
+import svelteConfig from '..//svelte.config.js'
 
 const loadSeed = async () => {
   const {
@@ -9,9 +10,10 @@ const loadSeed = async () => {
 }
 
 test('login authorize logout works', async ({ page }) => {
+  const { base } = svelteConfig.kit.paths
   const seed = await loadSeed()
   const [{ name: pod1 }] = seed.pods
-  await page.goto('/')
+  await page.goto(`${base}/`)
   // click on login page link
   await page.getByRole('link', { name: 'Login Page' }).click()
   // Enter webid oidcIssuer URL
@@ -32,7 +34,7 @@ test('login authorize logout works', async ({ page }) => {
   await page.getByRole('button', { name: 'Authorize' }).click()
   // Select webid
   // wait for redirection to settle
-  await page.waitForURL('http://localhost:4173/')
+  await page.waitForURL(`http://localhost:4173${base}/`)
   // check webid
   await page.getByText(`${cssConfig.baseUrl}/${pod1}/profile/card#me`).click()
   // check pod

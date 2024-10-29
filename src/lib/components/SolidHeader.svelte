@@ -4,6 +4,7 @@
   import SolidLogin from '$lib/components/SolidLogin.svelte'
 
   let {
+    base,
     context = 'session',
     handleSet,
     oidcIssuer,
@@ -31,6 +32,7 @@
     </div>
     <div class="flex-row login-box">
       <SolidLogin
+        {base}
         {context}
         {oidcIssuer}
         {reset}
