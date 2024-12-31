@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte'
   import { getContext } from 'svelte'
   import WebIDCheck from '@hexagon6/svelte-solid-webid-check/webid-check.svelte'
@@ -13,6 +13,14 @@
     reset,
     handleReset,
     handleSet,
+  }: {
+    base?: string,
+    context?: string,
+    oidcIssuer?: string,
+    success?: Function,
+    reset?: string,
+    handleReset?: Function,
+    handleSet?: Function,
   } = $props()
 
   let loginEndpoint = $state(oidcIssuer)
