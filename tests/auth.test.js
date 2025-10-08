@@ -5,7 +5,7 @@ import svelteConfig from '..//svelte.config.js'
 const loadSeed = async () => {
   const {
     default: [seed],
-  } = await import(`../${cssConfig.seedConfig}`, { assert: { type: 'json' } })
+  } = await import(`../${cssConfig.seedConfig}`, { with: { type: 'json' } })
   return seed
 }
 
