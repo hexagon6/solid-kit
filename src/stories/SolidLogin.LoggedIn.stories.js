@@ -1,4 +1,4 @@
-// import { within, userEvent, expect, waitFor } from '@storybook/test'
+// import { within, userEvent, expect, waitFor } from 'storybook/test'
 
 import SolidLogin from '$lib/components/SolidLogin.svelte'
 import SessionContextLoggedIn from './MockSessionContextLoggedIn.svelte'

@@ -14,13 +14,13 @@
     handleReset,
     handleSet,
   }: {
-    base?: string,
-    context?: string,
-    oidcIssuer?: string,
-    success?: Function,
-    reset?: string,
-    handleReset?: Function,
-    handleSet?: Function,
+    base?: string
+    context?: string
+    oidcIssuer?: string
+    success?: Function
+    reset?: string
+    handleReset?: Function
+    handleSet?: Function
   } = $props()
 
   let loginEndpoint = $state(oidcIssuer)
