@@ -82,7 +82,7 @@
   "license": "LICENSE",
   "dependencies": {
     "@hexagon6/svelte-solid-webid-check": "1.0.0",
-    "@inrupt/solid-client-authn-browser": "^2.3.0",
+    "@inrupt/solid-client-authn-browser": "^3.1.0",
     "dompurify": "^3.2.3",
     "fp-ts": "^2.16.9",
     "marked": "^15.0.3",

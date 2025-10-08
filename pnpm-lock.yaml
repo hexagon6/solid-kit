@@ -12,8 +12,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0(svelte@5.39.11)
       '@inrupt/solid-client-authn-browser':
-        specifier: ^2.3.0
-        version: 2.3.0
+        specifier: ^3.1.0
+        version: 3.1.0
       dompurify:
         specifier: ^3.2.3
         version: 3.2.3
@@ -561,18 +561,18 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@inrupt/oidc-client-ext@2.3.0':
-    resolution: {integrity: sha512-EGEViPSqzHiuCP6/bsSxB9UBcJ1qirunEOTozZqbr3ctJZ4LbeBJpoCo7i5rU+seAWymtQv8FpeY51YBUzW4/g==}
+  '@inrupt/oidc-client-ext@3.1.0':
+    resolution: {integrity: sha512-xilTPaPgRJSh+AOtjkbtk4KLTAjLfWy3owb1aOdfz9Vo3Dh5Z80rx/m/Y/Uur3AiVK9LYGrR6AM+HoCEH8MCMw==}
 
   '@inrupt/oidc-client@1.11.6':
     resolution: {integrity: sha512-1rCTk1T6pdm/7gKozutZutk7jwmYBADlnkGGoI5ypke099NOCa5KFXjkQpbjsps0PRkKZ+0EaR70XN5+xqmViA==}
 
-  '@inrupt/solid-client-authn-browser@2.3.0':
-    resolution: {integrity: sha512-3bh1bywDcIjqFMH6+pfAIuq0thLKC3d8Bwk+Wgg1wxgs/vgIFfzFVBjxwJu/Ms9g8MG6w7AApDC6Wbq2uZaU4w==}
+  '@inrupt/solid-client-authn-browser@3.1.0':
+    resolution: {integrity: sha512-TK8LdCuqJxZ6jvxWIJfRqji9lM7h69tbzlM0hoE/orrkQzxBUF7OOZUCXOpkIKDrl39BIfaacIOYhuBA8hkFYw==}
 
-  '@inrupt/solid-client-authn-core@2.3.0':
-    resolution: {integrity: sha512-uzMU3aiDuav33yEV3Fi8ywIycg66YNAYSbFBolRZbHLE/08BlsjJUzVT7Qv/XKBt1egT83sDrOIm5Mr3jm5KUQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || ^22.0.0}
+  '@inrupt/solid-client-authn-core@3.1.0':
+    resolution: {integrity: sha512-aoG8RvPBmYXTSqy2uJogpoVGPKsydC4mXNdm63BWCEMZ2QyaSRBjx4R4N6n5N2uy/aoib678Y7U3UtDCLDoFsQ==}
+    engines: {node: ^20.0.0 || ^22.0.0}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -2289,8 +2289,8 @@ packages:
   util@0.12.5:
     resolution: {integrity: sha512-kZf/K6hEIrWHI6XqOFUiiMa+79wE/D8Q+NCNAWclkyg3b4d2k7s0QGepNjiABc+aR3N1PAyHL7p6UcLY6LmrnA==}
 
-  uuid@11.0.3:
-    resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
+  uuid@11.1.0:
+    resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
     hasBin: true
 
   uuid@9.0.1:
@@ -2820,12 +2820,12 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@inrupt/oidc-client-ext@2.3.0':
+  '@inrupt/oidc-client-ext@3.1.0':
     dependencies:
       '@inrupt/oidc-client': 1.11.6
-      '@inrupt/solid-client-authn-core': 2.3.0
+      '@inrupt/solid-client-authn-core': 3.1.0
       jose: 5.9.6
-      uuid: 11.0.3
+      uuid: 11.1.0
 
   '@inrupt/oidc-client@1.11.6':
     dependencies:
@@ -2835,19 +2835,19 @@ snapshots:
       crypto-js: 4.2.0
       serialize-javascript: 4.0.0
 
-  '@inrupt/solid-client-authn-browser@2.3.0':
+  '@inrupt/solid-client-authn-browser@3.1.0':
     dependencies:
-      '@inrupt/oidc-client-ext': 2.3.0
-      '@inrupt/solid-client-authn-core': 2.3.0
+      '@inrupt/oidc-client-ext': 3.1.0
+      '@inrupt/solid-client-authn-core': 3.1.0
       events: 3.3.0
       jose: 5.9.6
-      uuid: 11.0.3
+      uuid: 11.1.0
 
-  '@inrupt/solid-client-authn-core@2.3.0':
+  '@inrupt/solid-client-authn-core@3.1.0':
     dependencies:
       events: 3.3.0
       jose: 5.9.6
-      uuid: 11.0.3
+      uuid: 11.1.0
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -4654,7 +4654,7 @@ snapshots:
       is-typed-array: 1.1.15
       which-typed-array: 1.1.19
 
-  uuid@11.0.3: {}
+  uuid@11.1.0: {}
 
   uuid@9.0.1: {}
 
