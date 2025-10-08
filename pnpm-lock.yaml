@@ -12,7 +12,7 @@ importers:
         specifier: 1.0.0
         version: 1.0.0(svelte@5.13.0)
       '@inrupt/solid-client-authn-browser':
-        specifier: '=2.3.0'
+        specifier: ^2.3.0
         version: 2.3.0
       dompurify:
         specifier: ^3.2.3
@@ -545,8 +545,8 @@ packages:
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
 
-  '@inrupt/oidc-client-ext@2.4.1':
-    resolution: {integrity: sha512-DyPVYgsreWn0ila+CCDXOdPNINJHpFpvpqNaiMxzJftD+DDw/m1Dg8pPr1H/afFZmmMyf1KTrcdvZd4d+yahRw==}
+  '@inrupt/oidc-client-ext@2.3.0':
+    resolution: {integrity: sha512-EGEViPSqzHiuCP6/bsSxB9UBcJ1qirunEOTozZqbr3ctJZ4LbeBJpoCo7i5rU+seAWymtQv8FpeY51YBUzW4/g==}
 
   '@inrupt/oidc-client@1.11.6':
     resolution: {integrity: sha512-1rCTk1T6pdm/7gKozutZutk7jwmYBADlnkGGoI5ypke099NOCa5KFXjkQpbjsps0PRkKZ+0EaR70XN5+xqmViA==}
@@ -554,8 +554,8 @@ packages:
   '@inrupt/solid-client-authn-browser@2.3.0':
     resolution: {integrity: sha512-3bh1bywDcIjqFMH6+pfAIuq0thLKC3d8Bwk+Wgg1wxgs/vgIFfzFVBjxwJu/Ms9g8MG6w7AApDC6Wbq2uZaU4w==}
 
-  '@inrupt/solid-client-authn-core@2.4.1':
-    resolution: {integrity: sha512-px0O5m4xTIgV/uFmfR956F+ZVBaoCzpRlaGjThhgPrUqy5obI6X4A/qXv3Cil6Hkmc2Ip/whiq77OQUmRbvYog==}
+  '@inrupt/solid-client-authn-core@2.3.0':
+    resolution: {integrity: sha512-uzMU3aiDuav33yEV3Fi8ywIycg66YNAYSbFBolRZbHLE/08BlsjJUzVT7Qv/XKBt1egT83sDrOIm5Mr3jm5KUQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || ^22.0.0}
 
   '@jridgewell/gen-mapping@0.3.8':
@@ -2236,8 +2236,8 @@ packages:
   util@0.12.5:
     resolution: {integrity: sha512-kZf/K6hEIrWHI6XqOFUiiMa+79wE/D8Q+NCNAWclkyg3b4d2k7s0QGepNjiABc+aR3N1PAyHL7p6UcLY6LmrnA==}
 
-  uuid@11.1.0:
-    resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
+  uuid@11.0.3:
+    resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
     hasBin: true
 
   uuid@9.0.1:
@@ -2756,12 +2756,12 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@inrupt/oidc-client-ext@2.4.1':
+  '@inrupt/oidc-client-ext@2.3.0':
     dependencies:
       '@inrupt/oidc-client': 1.11.6
-      '@inrupt/solid-client-authn-core': 2.4.1
+      '@inrupt/solid-client-authn-core': 2.3.0
       jose: 5.9.6
-      uuid: 11.1.0
+      uuid: 11.0.3
 
   '@inrupt/oidc-client@1.11.6':
     dependencies:
@@ -2773,17 +2773,17 @@ snapshots:
 
   '@inrupt/solid-client-authn-browser@2.3.0':
     dependencies:
-      '@inrupt/oidc-client-ext': 2.4.1
-      '@inrupt/solid-client-authn-core': 2.4.1
+      '@inrupt/oidc-client-ext': 2.3.0
+      '@inrupt/solid-client-authn-core': 2.3.0
       events: 3.3.0
       jose: 5.9.6
-      uuid: 11.1.0
+      uuid: 11.0.3
 
-  '@inrupt/solid-client-authn-core@2.4.1':
+  '@inrupt/solid-client-authn-core@2.3.0':
     dependencies:
       events: 3.3.0
       jose: 5.9.6
-      uuid: 11.1.0
+      uuid: 11.0.3
 
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:
@@ -4550,7 +4550,7 @@ snapshots:
       is-typed-array: 1.1.13
       which-typed-array: 1.1.16
 
-  uuid@11.1.0: {}
+  uuid@11.0.3: {}
 
   uuid@9.0.1: {}
 
