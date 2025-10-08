@@ -31,8 +31,8 @@ importers:
         version: 3.0.0
     devDependencies:
       '@playwright/test':
-        specifier: ~1.45.3
-        version: 1.45.3
+        specifier: ~1.56.0
+        version: 1.56.0
       '@storybook/addon-essentials':
         specifier: ^8.6.14
         version: 8.6.14(@types/react@18.3.11)(storybook@8.6.14(prettier@3.6.2))
@@ -596,8 +596,8 @@ packages:
       '@types/react': '>=16'
       react: '>=16'
 
-  '@playwright/test@1.45.3':
-    resolution: {integrity: sha512-UKF4XsBfy+u3MFWEH44hva1Q8Da28G6RFtR2+5saw+jgAFQV5yYnB1fu68Mz7fO+5GJF3wgwAIs0UelU8TxFrA==}
+  '@playwright/test@1.56.0':
+    resolution: {integrity: sha512-Tzh95Twig7hUwwNe381/K3PggZBZblKUe2wv25oIpzWLr6Z0m4KgV1ZVIjnR6GM9ANEqjZD7XsZEa6JL/7YEgg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1885,13 +1885,13 @@ packages:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
 
-  playwright-core@1.45.3:
-    resolution: {integrity: sha512-+ym0jNbcjikaOwwSZycFbwkWgfruWvYlJfThKYAlImbxUgdWFO2oW70ojPm4OpE4t6TAo2FY/smM+hpVTtkhDA==}
+  playwright-core@1.56.0:
+    resolution: {integrity: sha512-1SXl7pMfemAMSDn5rkPeZljxOCYAmQnYLBTExuh6E8USHXGSX3dx6lYZN/xPpTz1vimXmPA9CDnILvmJaB8aSQ==}
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.45.3:
-    resolution: {integrity: sha512-QhVaS+lpluxCaioejDZ95l4Y4jSFCsBvl2UZkpeXlzxmqS+aABr5c82YmfMHrL6x27nvrvykJAFpkzT2eWdJww==}
+  playwright@1.56.0:
+    resolution: {integrity: sha512-X5Q1b8lOdWIE4KAoHpW3SE8HvUB+ZZsUoN64ZhjnN8dOb1UpujxBtENGiZFE+9F/yhzJwYa+ca3u43FeLbboHA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -2874,9 +2874,9 @@ snapshots:
       '@types/react': 18.3.11
       react: 19.2.0
 
-  '@playwright/test@1.45.3':
+  '@playwright/test@1.56.0':
     dependencies:
-      playwright: 1.45.3
+      playwright: 1.56.0
 
   '@polka/url@1.0.0-next.29': {}
 
@@ -4266,11 +4266,11 @@ snapshots:
 
   picomatch@4.0.3: {}
 
-  playwright-core@1.45.3: {}
+  playwright-core@1.56.0: {}
 
-  playwright@1.45.3:
+  playwright@1.56.0:
     dependencies:
-      playwright-core: 1.45.3
+      playwright-core: 1.56.0
     optionalDependencies:
       fsevents: 2.3.2
 
